@@ -1,10 +1,12 @@
-# Dashboard feito com React e javascript puro :rocket: :rocket: :tada:
+# Dashboard responsivo feito com React e Javascript puro :rocket: :rocket: :tada:
 
 
 
 ## Telas da aplicação 📺
 #### A aplicação encontra-se hospedada na vercel
-
+```
+https://chat-eat-brunosiqueira.vercel.app/
+```
 
 ### Modo Light :crescent_moon:
 ![image](https://user-images.githubusercontent.com/70710358/187575042-32aebc7b-6354-4303-b06e-b9dbdfdc1d2e.png)
