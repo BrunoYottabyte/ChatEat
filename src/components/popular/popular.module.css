@@ -1,0 +1,100 @@
+.categories header {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.categories header h2{
+    font-size: 1.125rem;
+}
+
+.categories header svg {
+    width: 13px;
+    height: 13px;
+    transform: rotate(-90deg);
+}
+
+/* CARD - item */
+.list{
+    display: flex;
+    gap: 25px;
+    overflow: auto;
+    user-select: none;
+}
+.list::-webkit-scrollbar{
+    width: 0px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap:10px
+}
+
+.card{
+    min-width: 220px;
+    min-height: 130px;
+    border-radius: 12px;
+    background-color: var(--gray-300);
+    position: relative;
+}
+
+.details{
+    display: flex;
+    justify-content: space-between;
+}
+
+.details p{
+    font-size: 0.8125rem;
+    font-weight: bold;
+    
+}
+
+.details span{
+    font-size: 0.57rem;
+    color: var(--orange-500);
+    background-color: var(--orange-500-10);
+    padding: 0 6px;
+
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+}
+
+.ribbon{
+    width: 65px;
+    height: 17px;
+    background-color: var(--red-500);
+    position: absolute;
+    right: 0;
+    top: 20px;
+    border-radius: 3px 0 0 3px;
+    color: var(--white);
+    font-size: 0.57rem;
+
+    display: grid;
+    place-items: center;
+}
+
+.rank{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-size: 0.6rem;
+    font-weight: bold;
+    border-radius: 3px;
+    width: 42px;
+    background-color: rgba(255, 255,255,0.6);
+
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    height: 17px;
+
+}
+
+.rank svg{
+    width: 11px;
+    height: 11px;
+}
