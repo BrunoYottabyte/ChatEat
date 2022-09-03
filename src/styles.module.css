@@ -240,6 +240,8 @@ button {
     padding: 31px 0 0 30px;    
     position: relative;
     display: flex;
+    font-size: 1.1rem !important;
+    
 }
 
 .content .banner svg{
@@ -254,7 +256,7 @@ button {
 
 .content .banner p{
     width: 65%;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--white);
 }
 
@@ -376,6 +378,10 @@ button {
     html{
         font-size: 0.8rem;
     }
+    .content .banner p{
+        font-size: 1.5rem !important;
+    }
+
 }
 
 @media (max-width: 1068px) {
