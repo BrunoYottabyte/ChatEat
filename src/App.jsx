@@ -73,11 +73,7 @@ function App() {
   const onMouseMove = (e) => {
     if(!pos.dragging)return;
     e.preventDefault();
-  
-      if(e.clientX > pos.start){
         newPos = pos.start - (e.clientX - list_categories.current.offsetLeft) + posFinal;
-      }
-
       list_categories.current.scrollTo({left: newPos})
     
   }
