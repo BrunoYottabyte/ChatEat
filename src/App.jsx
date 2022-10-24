@@ -10,67 +10,6 @@ import { NearbyList } from './components/nearby';
 import Items from './components/itemsCart';
 import Cards from './components/cards';
 
-// function App() {
-
-//   const [pos, setPos] = useState({
-//     diffX: 0,
-//     diffY: 0,
-//     dragging: false,
-//     styles: {}
-//   })
-
-//   const [els, setEls] = useState([]);
-
-//   const dragStart = (e) => {
-
-//     setPos({
-//       diffX: e.screenX - e.currentTarget.getBoundingClientRect().left, 
-//       diffY: e.screenY - e.currentTarget.getBoundingClientRect().top,
-//       dragging: true
-//     })
-//   }
-
-//   const dragEnd = () => {
-//     setPos({
-//       dragging: false
-//     })
-//   }
-
-
-//   const dragging = (e) => {
-//     // e.preventDefault()
-
-//     if(pos.dragging){
-//       let left = e.screenX - pos.diffX;
-//       let top = e.screenY - pos.diffY;
-
-//       const divs = document.querySelectorAll('.item');
-
-//       [...divs].map((div, index) => {
-//         div.style.left = left + 'px';
-//         div.style.top = top + 'px';
-//           return div;
-//       })
-//     }
-
-
-//   }
-
-//   const list = ['item 1', 'item 2', 'item 3', 'item 4']
-
-//   return (
-//     list.map((item, i) => {
-//       return(
-//         <div className="item"
-//           key={i} 
-//           onMouseDown={dragStart} onMouseMove={dragging} onMouseUp={dragEnd}>
-//             {item}
-//         </div>
-//       )
-//     })
-//   )
-// }
-
 function App() {
 
   const cards = [
@@ -88,11 +27,10 @@ function App() {
   const [posFinal, setPosFinal] = useState(0);
   const [allTotal, setAllTotal] = useState(0);
   const [mode, setMode] = useState('light')
+
   const Total = (tot) => {
     setAllTotal(tot);
   }
-
-
 
   const [pos, setPos] = useState({
     start: 0,
@@ -109,6 +47,7 @@ function App() {
     const cards = [...list_categories.current.children];
     cards.map(card => card.style.cursor = 'grabbing')
   }    
+
   const onMouseLeave = () => {
     setPos({
       dragging: false,
@@ -140,7 +79,6 @@ function App() {
       }
 
       list_categories.current.scrollTo({left: newPos})
-      
     
   }
   

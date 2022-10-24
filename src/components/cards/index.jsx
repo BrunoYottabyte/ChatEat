@@ -47,12 +47,14 @@ const Cards = ({ name, price, lengths, index, reOrder }) => {
 
  
     const dragging = (e) => {
-        
+
         if(!positions.dragging) return;
+  
         card_ref.current.style.cursor = 'grabbing'
         e.preventDefault();
-        let x = e.screenX - positions.offX;
-        let y = e.screenY - positions.offY;
+        let x = e.pageX - positions.offX;
+        let y = e.pageY - positions.offY;
+   
     
         card_ref.current.style.left = `${x}px`
         card_ref.current.style.top = `${y}px`
@@ -114,10 +116,11 @@ const Cards = ({ name, price, lengths, index, reOrder }) => {
     const Down = (e) => {
         card_ref.current.style.transition = '0s'
         card_ref.current.style.cursor = 'grabbing'
+  
         setPositions({
-                initial: e.clientX,
-                offX: e.clientX ,
-                offY: e.clientY,
+                initial: e.pageX,
+                offX: e.pageX,
+                offY: e.pageY,
                 dragging: true,
         })
 
